@@ -7,7 +7,11 @@ class Solution:
         while x>0:
             reversed_num=reversed_num*10+x%10
             x//=10
-        return reversed_num * sign
+        reversed_num=reversed_num * sign
+       
+        if reversed_num < -2147483648 or reversed_num > 2147483647:
+            return 0
+        return reversed_num
 if __name__ == "__main__":
     s = Solution()
     print(s.reverse(123))  # 321
