@@ -22,3 +22,6 @@ solution = Solution()
 print(solution.isAnagram("anagram", "nagaram"))   # True
 print(solution.isAnagram("rat", "car"))           # False
 print(solution.isAnagram("Dormitory", "Dirty room"))  # True
+
+#Space complexity is O(1) because the count array has a fixed size of 26, regardless of the input size. 
+#The time complexity is O(n), where n is the length of the input strings, as we iterate through both strings once to populate and check the count array.
